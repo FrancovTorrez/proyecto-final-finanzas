@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal Financiero — Finanzas I UPB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =================== HEADER =================== -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__mark">◆</span>
+      <div class="topbar__title">
+        <span class="topbar__name">TERMINAL FINANCIERO</span>
+        <span class="topbar__sub">Finanzas I · UPB La Paz · Gestión 2026</span>
+      </div>
+    </div>
+    <div class="topbar__status">
+      <span id="statusDot" class="status-dot"></span>
+      <span id="statusText" class="status-text">Conectando con la API...</span>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- =================== SIDEBAR: SELECCION DE ACTIVOS =================== -->
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <h2 class="sidebar__heading">Universo de activos</h2>
+        <p class="sidebar__hint">Selecciona los activos para el portafolio. Los módulos 2 y 3 se recalculan en vivo.</p>
+
+        <div class="sidebar__toolbar">
+          <button id="btnSeleccionInicial" class="btn-chip">Selección inicial</button>
+          <button id="btnSeleccionarTodos" class="btn-chip">Todos</button>
+          <button id="btnLimpiar" class="btn-chip btn-chip--muted">Limpiar</button>
+        </div>
+
+        <input id="filtroActivos" type="text" class="input-filtro" placeholder="Buscar por ticker, sector o región...">
+
+        <div id="listaActivos" class="lista-activos">
+          <!-- Se llena dinámicamente vía JS -->
+        </div>
+      </div>
+
+      <div class="sidebar__footer">
+        <div class="contador-seleccion">
+          <span id="contadorSeleccionados">0</span> activos seleccionados
+        </div>
+      </div>
+    </aside>
+
+    <!-- =================== CONTENIDO PRINCIPAL =================== -->
+    <main class="contenido">
+
+      <!-- Tabs de navegacion entre modulos -->
+      <nav class="tabs">
+        <button class="tab tab--activo" data-modulo="1">
+          <span class="tab__numero">01</span>
+          <span class="tab__label">Riesgo y Rentabilidad</span>
+        </button>
+        <button class="tab" data-modulo="2">
+          <span class="tab__numero">02</span>
+          <span class="tab__label">Optimización de Portafolios</span>
+        </button>
+        <button class="tab" data-modulo="3">
+          <span class="tab__numero">03</span>
+          <span class="tab__label">Modelos de Valoración (CAPM)</span>
+        </button>
+      </nav>
+
+      <!-- ============ MODULO 1 ============ -->
+      <section id="modulo1" class="modulo modulo--activo">
+        <div id="modulo1Contenido" class="modulo__placeholder">
+          Cargando Módulo 1...
+        </div>
+      </section>
+
+      <!-- ============ MODULO 2 ============ -->
+      <section id="modulo2" class="modulo">
+        <div id="modulo2Contenido" class="modulo__placeholder">
+          Selecciona activos en la barra lateral para calcular el portafolio óptimo.
+        </div>
+      </section>
+
+      <!-- ============ MODULO 3 ============ -->
+      <section id="modulo3" class="modulo">
+        <div id="modulo3Contenido" class="modulo__placeholder">
+          Selecciona activos en la barra lateral para ver el análisis CAPM.
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="modulo1.js"></script>
+  <script src="modulo2.js"></script>
+  <script src="modulo3.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
