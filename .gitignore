@@ -1,0 +1,10 @@
+# Entorno virtual de Python (Render lo recrea desde requirements.txt)
+venv/
+__pycache__/
+*.pyc
+
+# Archivos del sistema
+.DS_Store
+
+# Editor
+.vscode/

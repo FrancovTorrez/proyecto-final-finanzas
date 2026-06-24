@@ -1,0 +1,36 @@
+﻿Ticker,Tipo,Capitalizacion_USD,Fuente
+AAPL,Accion,4322488745984,marketCap
+MSFT,Accion,2777788973056,marketCap
+GOOGL,Accion,4223676710912,marketCap
+NVDA,Accion,4845168754688,marketCap
+META,Accion,1427101581312,marketCap
+JNJ,Accion,575517425664,marketCap
+PFE,Accion,140890259456,marketCap
+UNH,Accion,371658096640,marketCap
+JPM,Accion,895331926016,marketCap
+BAC,Accion,410963574784,marketCap
+V,Accion,624684826624,marketCap
+KO,Accion,345532366848,marketCap
+PG,Accion,351292456960,marketCap
+MCD,Accion,193016020992,marketCap
+AMZN,Accion,2518346891264,marketCap
+XOM,Accion,579173482496,marketCap
+CVX,Accion,350481350656,marketCap
+CAT,Accion,453333024768,marketCap
+HON,Accion,140905447424,marketCap
+T,Accion,158491607040,marketCap
+VZ,Accion,195123871744,marketCap
+TSM,Accion,2263325343744,marketCap
+BABA,Accion,246151135232,marketCap
+NVO,Accion,209972461568,marketCap
+SHEL,Accion,220402237440,marketCap
+VALE,ADR,65180901376,marketCap
+ITUB,ADR,87513661440,marketCap
+AMX,ADR,77634011136,marketCap
+FMX,ADR,43304022016,marketCap
+SPY,ETF,783796404224,totalAssets (AUM)
+EFA,ETF,77424812032,totalAssets (AUM)
+EEM,ETF,30325661696,totalAssets (AUM)
+AGG,ETF,136455700480,totalAssets (AUM)
+GLD,ETF,150367518720,totalAssets (AUM)
+XLE,ETF,38671941632,totalAssets (AUM)
