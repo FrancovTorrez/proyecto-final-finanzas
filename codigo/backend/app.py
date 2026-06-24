@@ -22,6 +22,7 @@ EJECUCION:
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import os
 
 import data_loader as dl
 import metrics as m
@@ -354,4 +355,8 @@ def health():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    # Render (y otros servicios de hosting) inyectan el puerto correcto via
+    # la variable de entorno PORT. En uso local (tu computadora), esa
+    # variable no existe, por lo que se usa el puerto 5000 de siempre.
+    puerto = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=puerto)
